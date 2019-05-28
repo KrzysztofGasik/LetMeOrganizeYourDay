@@ -1,0 +1,19 @@
+header {
+  width: 100%;
+  font-size: 25px;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  form input, button {
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+  }
+  form button {
+    margin-left: 5px;
+  }
+}

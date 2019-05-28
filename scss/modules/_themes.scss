@@ -1,0 +1,274 @@
+.theme-color0 {
+  header {
+    background-color: #00a82d;
+    color: #fff;
+    form button {
+      color: #ffae19;
+      background-color: #fff;
+      &:hover {
+        color: #cc8b14;
+      }
+    }
+  }
+
+  .main__window {
+    .add {
+      i {
+        color: #ffae19;
+        background-color: #fae8be;
+        &:hover {
+          color: #cc8b14;
+        }
+      }
+    }
+
+    .new__note__container,
+    .pending__note__container {
+      display: flex;
+      flex-flow: column wrap;
+      .new,
+      .pending {
+        input,
+        button,
+        span {
+          background-color: #ffae19;
+          color: #311d12;
+        }
+        button:hover {
+          background-color: #cc8b14;
+        }
+        input#descriptionNote {
+          background-color: #66ca81;
+        }
+      }
+    }
+    .pending__note__container:hover {
+      animation: turnNote 1s ease-in-out infinite alternate;
+    }
+  }
+
+  nav {
+    background-color: #66ca81;
+    ul {
+      li {
+        a:visited,
+        a:link {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .fa-home,
+  .fa-plus-square,
+  .fa-check,
+  .fa-sticky-note,
+  .fa-cog {
+    color: #ffae19;
+  }
+
+  .fa-home:hover,
+  .fa-plus-square:hover,
+  .fa-check:hover,
+  .fa-sticky-note:hover,
+  .fa-cog:hover {
+    color: #fff;
+  }
+
+  aside {
+    background-color: #66ca81;
+  }
+
+  .btn__weather {
+    background-color: #ffae19;
+    color: #fff;
+    &::hover {
+      background-color: #cc8b14;
+    }
+  }
+
+  div.react-calendar {
+    background-color: #fff;
+  }
+
+  .react-calendar__tile--active {
+    background-color: #00a82d;
+  }
+
+  .theme-switch {
+    background-color: #ffae19;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-weight: 900;
+    &::hover {
+      background-color: #cc8b14;
+    }
+  }
+
+  footer {
+    background-color: #00a82d;
+    color: #fff;
+  }
+
+  .fa-facebook-f,
+  .fa-linkedin-in,
+  .fa-youtube,
+  .fa-twitter {
+    color: #ffae19;
+  }
+}
+
+//---------------------------------------- COLOR 1
+
+.theme-color1 {
+  header {
+    background-color: #fd4a1f;
+    color: #fff;
+    form button {
+      color: #fae8be;
+      background-color: #311d12;
+      &:hover {
+        color: #ead7ad;
+      }
+    }
+  }
+
+  .main__window {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    .add {
+      i {
+        color: #311d12;
+        background-color: #fae8be;
+        &:hover {
+          color: #200c01;
+        }
+      }
+    }
+
+    .new__note__container,
+    .pending__note__container {
+      display: flex;
+      flex-flow: column wrap;
+      .new,
+      .pending {
+        input,
+        button,
+        span {
+          background-color: #311d12;
+          color: #fae8be;
+        }
+        button:hover {
+          background-color: #200c01;
+        }
+        input#descriptionNote {
+          color: #fae8be;
+          background-color: #fd4a1f;
+        }
+      }
+    }
+    .pending__note__container:hover {
+      animation: turnNote 1s ease-in-out infinite alternate;
+    }
+  }
+
+  nav {
+    background-color: #fd4a1f;
+    ul {
+      li {
+        a:visited,
+        a:link {
+          color: #200c01;
+        }
+      }
+    }
+  }
+
+  .fa-home,
+  .fa-plus-square,
+  .fa-check,
+  .fa-sticky-note,
+  .fa-cog {
+    color: #311d12;
+  }
+
+  .fa-home:hover,
+  .fa-plus-square:hover,
+  .fa-check:hover,
+  .fa-sticky-note:hover,
+  .fa-cog:hover {
+    color: #fae8be;
+  }
+
+  aside {
+    background-color: #fd4a1f;
+  }
+
+  .btn__weather {
+    background-color: #311d12;
+    color: #fae8be;
+    &::hover {
+      background-color: #200c01;
+    }
+  }
+
+  div.react-calendar {
+    background-color: #fae8be;
+  }
+
+  .react-calendar__tile--active {
+    background-color: #fd4a1f;
+  }
+
+  .theme-switch {
+    background-color: #311d12;
+    padding: 10px;
+    border: none;
+    color: #fae8be;
+    font-weight: 900;
+    &::hover {
+      background-color: #200c01;
+    }
+  }
+
+  footer {
+    background-color: #fd4a1f;
+    color: #fae8be;
+  }
+
+  .fa-facebook-f,
+  .fa-linkedin-in,
+  .fa-youtube,
+  .fa-twitter {
+    color: #311d12;
+  }
+}
+
+@keyframes turnNote {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fa-linkedin-in:hover {
+  color: #0077b5;
+}
+
+.fa-youtube:hover {
+  color: #ff0000;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2;
+}

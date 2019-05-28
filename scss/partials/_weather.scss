@@ -1,0 +1,43 @@
+aside {
+  order: 2;
+  flex: 1 1 30%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__weather {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 25px;
+}
+
+.btn__weather:hover {
+  cursor: pointer;
+  animation: goAndJump 1s linear infinite alternate;
+}
+
+@keyframes goAndJump {
+  0% {
+    transform: translateX(-3%);
+  }
+  100% {
+    transform: translateX(3%);
+  }
+}
+
+.data__weather {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  .data__weather__split {
+    display: flex;
+    flex-flow: column wrap;
+    span {
+      font-weight: 700;
+    }
+  }
+}
