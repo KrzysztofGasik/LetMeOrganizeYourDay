@@ -9,6 +9,13 @@
         color: #cc8b14;
       }
     }
+    .fa-search {
+      color: #ffae19;
+    }
+
+    .fa-search:hover {
+      color: #fff;
+    }
   }
 
   .main__window {
@@ -131,6 +138,14 @@
       &:hover {
         color: #ead7ad;
       }
+    }
+
+    .fa-search {
+      color: #311d12;
+    }
+
+    .fa-search:hover {
+      color: #fae8be;
     }
   }
 

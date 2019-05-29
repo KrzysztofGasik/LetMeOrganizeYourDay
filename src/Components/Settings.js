@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { SketchPicker } from "react-color";
 
 class Settings extends Component {
   constructor(props) {
@@ -20,9 +21,7 @@ class Settings extends Component {
     return (
       <>
         <button className="theme-switch" onClick={this.toggleTheme}>
-          {this.state.theme
-            ? "Change to light theme"
-            : "Change to dark theme"}
+          {this.state.theme ? "Change to light theme" : "Change to dark theme"}
           {this.state.theme
             ? document.body.classList.add("theme-color1")
             : document.body.classList.remove("theme-color1")}
