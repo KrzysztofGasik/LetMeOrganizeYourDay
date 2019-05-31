@@ -1,11 +1,13 @@
 footer {
   width: 100%;
+  height: auto;
   font-style: italic;
   padding: 10px;
-  text-align: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  bottom: 0;
   ul {
     list-style: none;
     display: flex;
@@ -21,9 +23,9 @@ footer {
 }
 
 .fa-facebook-f,
-  .fa-linkedin-in,
-  .fa-youtube,
-  .fa-twitter {
+.fa-linkedin-in,
+.fa-youtube,
+.fa-twitter {
   @media (max-width: 450px) {
     font-size: 15px;
   }
@@ -31,6 +33,6 @@ footer {
     font-size: 20px;
   }
   @media (min-width: 900px) {
-    font-size: 25px;;
+    font-size: 25px;
   }
 }

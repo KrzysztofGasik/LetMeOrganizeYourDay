@@ -38,8 +38,8 @@ class WeatherAPI extends Component {
     )
       .then(response => response.json())
       .then(data => {
-        this.setState(prevState => {
-          return {
+        console.log(data);
+        this.setState({
             city: data.name,
             humidity: data.main.humidity,
             pressure: data.main.pressure,
@@ -49,8 +49,7 @@ class WeatherAPI extends Component {
               "http://openweathermap.org/img/w/" +
               data.weather[0].icon +
               ".png",
-            show: !prevState.show
-          };
+            show: !this.state.show
         });
       })
       .catch(() => {

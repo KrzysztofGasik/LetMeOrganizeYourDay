@@ -8,7 +8,8 @@ class NewNote extends Component {
       title: "",
       description: "",
       date: new Date().toLocaleDateString("pl-PL"),
-      status: "new"
+      status: "new",
+      notes: []
     };
   }
 
@@ -47,7 +48,9 @@ class NewNote extends Component {
     }
 
     this.setState({
-      isClick: false
+      isClick: false,
+      title: "",
+      description: ""
     })
 
   };

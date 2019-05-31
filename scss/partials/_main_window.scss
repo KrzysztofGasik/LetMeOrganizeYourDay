@@ -90,8 +90,8 @@
       font: 0.75em "Arial";
     }
     #descriptionNote {
-      width: 400px;
-      height: 400px;
+      width: 200px;
+      height: 200px;
       background-color: #feff9c;
       text-align: center;
       resize: none;
@@ -135,6 +135,24 @@
 
     .pending__note_wrapper {
       display: flex;
+    }
+
+    @media (max-width: 450px) {
+      .pending__note_wrapper {
+        display: flex;
+        flex-flow: column wrap;
+      }
+    }
+    @media (min-width: 450px) and (max-width: 900px) {
+      .pending__note_wrapper {
+        display: flex;
+        flex-flow: column wrap;
+      }
+    }
+    @media (min-width: 900px) {
+      .pending__note_wrapper {
+        display: flex;
+      }
     }
 
     #descriptionNote {
