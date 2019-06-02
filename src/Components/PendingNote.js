@@ -7,7 +7,9 @@ class PendingNote extends Component {
       notes: JSON.parse(localStorage.getItem("data")),
       edit: false,
       isClick: false,
-      readOnly: true
+      readOnly: true,
+      title: "",
+      description: ""
     };
   }
 
@@ -17,31 +19,35 @@ class PendingNote extends Component {
     });
   };
 
-  editNote = note => {
-    const indexToUpdate = this.state.notes.findIndex(item => item.id == note.id);
-    this.setState(prevState => {
-      const newNotes = [...prevState.notes];
-      newNotes[indexToUpdate] = note;
-      localStorage.setItem("data", JSON.stringify(newNotes));
-      return {
-        notes: newNotes,
-        edit: !prevState.edit,
-        readOnly: !prevState.readOnly
-      };
+  editNote = (e, note) => {
+    const indexToUpdate = this.state.notes.findIndex(
+      item => item.id == note.id
+    );
+
+    const newNotes = [...this.state.notes];
+    newNotes[indexToUpdate].title = this.state.title;
+    newNotes[indexToUpdate].description = this.state.description;
+
+    this.setState({
+      notes: newNotes,
+      edit: !this.state.edit,
+      readOnly: !this.state.readOnly
     });
-    //localStorage.setItem("data", JSON.stringify(arrUpdate));
+
+    localStorage.setItem("data", JSON.stringify(newNotes));
   };
 
   completeNote = (e, id) => {
     e.preventDefault();
 
     const data2 = JSON.parse(localStorage.getItem("data2"));
-    const noteToMove = this.state.notes.filter(note => note.id == id);
+    const filterArray = this.state.notes.filter(note => note.id == id);
+    const noteToMove = filterArray[0];
 
     if (data2 === null) {
       localStorage.setItem("data2", JSON.stringify([noteToMove]));
     } else {
-      localStorage.setItem("data2", JSON.stringify([...data2,noteToMove]));
+      localStorage.setItem("data2", JSON.stringify([...data2, noteToMove]));
     }
 
     const arrToUpdate = this.state.notes.filter(note => note.id != id);
@@ -51,7 +57,6 @@ class PendingNote extends Component {
       notes: arrToUpdate,
       isClick: false
     });
-
   };
 
   deleteNote = id => {
@@ -65,7 +70,10 @@ class PendingNote extends Component {
   };
 
   render() {
-    if (this.state.notes.length > 0) {
+    if (
+      localStorage.getItem("data") !== null &&
+      localStorage.getItem("data").length > 0
+    ) {
       return (
         <ul>
           {this.state.notes.map((el, index) => {
@@ -76,14 +84,21 @@ class PendingNote extends Component {
                     <div className="pending">
                       <input
                         type="text"
-                        defaultValue={el.title}
                         id="titleNote"
+                        value={
+                          this.state.title === "" ? el.title : this.state.title
+                        }
                         readOnly={this.state.readOnly}
                         onChange={e => this.editInput(e, "title")}
                       />
                       <input
-                        defaultValue={el.description}
+                        type="text"
                         id="descriptionNote"
+                        value={
+                          this.state.description === ""
+                            ? el.description
+                            : this.state.description
+                        }
                         readOnly={this.state.readOnly}
                         onChange={e => this.editInput(e, "description")}
                       />
@@ -92,7 +107,7 @@ class PendingNote extends Component {
                         <button onClick={e => this.completeNote(e, el.id)}>
                           Complete
                         </button>
-                        <button onClick={()=> this.editNote(el)}>
+                        <button onClick={e => this.editNote(e, el)}>
                           {this.state.edit ? "Finish" : "Edit"}
                         </button>
                         <button onClick={() => this.deleteNote(el.id)}>

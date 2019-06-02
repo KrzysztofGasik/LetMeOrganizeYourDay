@@ -8,11 +8,18 @@ class CompleteNote extends Component {
     };
   }
 
-  pendNote = (e, id)  => {
+  pendNote = (e, id) => {
     e.preventDefault();
+    const data = JSON.parse(localStorage.getItem("data"));
+    const data2 = JSON.parse(localStorage.getItem("data2"));
+    const filterArray = this.state.notes.filter(note => note.id == id);
+    const noteToMove = filterArray[0];
 
-    const noteToMove = this.state.notes.filter(note => note.id == id);
-    localStorage.setItem("data", JSON.stringify(noteToMove));
+    if (data2 === null) {
+      localStorage.setItem("data", JSON.stringify([noteToMove]));
+    } else {
+      localStorage.setItem("data", JSON.stringify([...data, noteToMove]));
+    }
 
     const arrToUpdate = this.state.notes.filter(note => note.id != id);
     localStorage.setItem("data2", JSON.stringify(arrToUpdate));
@@ -33,7 +40,10 @@ class CompleteNote extends Component {
   };
 
   render() {
-    if (this.state.notes.length > 0) {
+    if (
+      localStorage.getItem("data2") !== null &&
+      localStorage.getItem("data2").length > 0
+    ) {
       return (
         <ul>
           {this.state.notes.map((el, index) => {

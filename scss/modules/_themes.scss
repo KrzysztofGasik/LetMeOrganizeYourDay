@@ -20,6 +20,7 @@
 
   .main__window {
     .add {
+      background-color: #fae8be;
       i {
         color: #ffae19;
         background-color: #fae8be;
@@ -55,7 +56,7 @@
   }
 
   nav {
-    background-color: #66ca81;
+    background-color: #00a82d;
     ul {
       li {
         a:visited,
@@ -79,11 +80,11 @@
   .fa-check:hover,
   .fa-sticky-note:hover,
   .fa-cog:hover {
-    color: #fff;
+    color: #000;
   }
 
   aside {
-    background-color: #66ca81;
+    background-color: #00a82d;
   }
 
   .btn__weather {
@@ -150,9 +151,8 @@
   }
 
   .main__window {
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
     .add {
+      background-color: #fae8be;
       i {
         color: #311d12;
         background-color: #fae8be;
@@ -198,6 +198,10 @@
         }
       }
     }
+  }
+
+  nav ul li:hover:after {
+    color: #fae8be;
   }
 
   .fa-home,

@@ -27,10 +27,12 @@ class WeatherAPI extends Component {
         long: longitude
       });
     });
+    
     if (this.state.lat != "" && this.state.long != "") {
       this.getWeather(this.state.lat, this.state.long);
     }
   };
+
 
   getWeather = (lat, long) => {
     fetch(
@@ -38,7 +40,6 @@ class WeatherAPI extends Component {
     )
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         this.setState({
             city: data.name,
             humidity: data.main.humidity,
@@ -107,7 +108,7 @@ class CurrentDate extends Component {
   render() {
     return (
       <div>
-        <Calendar onChange={this.onChange} value={this.state.date} />
+        <Calendar onChange={this.onChange} value={this.state.date}  locale='en-US'/>
       </div>
     );
   }
@@ -116,12 +117,8 @@ class CurrentDate extends Component {
 export const WeatherWidget = () => {
   return (
     <aside>
-      <div>
         <WeatherAPI />
-      </div>
-      <div>
-        <CurrentDate />
-      </div>
+        <CurrentDate/>
     </aside>
   );
 };

@@ -7,16 +7,9 @@
   order: 1;
   flex: 1 1 60%;
   animation: enterGently 1s ease-in-out;
-  background: linear-gradient(
-      to bottom,
-      #fae8be,
-      #fae8be 95%,
-      #000 50%,
-      #000
-    );
-    background-size: 100% 20px;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
+  background: linear-gradient(to bottom, #fae8be, #fae8be 95%, #000 50%, #000);
+  background-size: 100% 20px;
+  border: 1px solid #000;
   iframe {
     border: none;
     width: 100%;
@@ -48,14 +41,35 @@
     transform: scale(0.8);
   }
   100% {
-    transform: scale(1.0);
+    transform: scale(1);
   }
 }
 
 .add {
   border: none;
-  i {
-    font-size: 200px;
+
+  @media (max-width: 450px) {
+    i {
+      font-size: 100px;
+    }
+  }
+
+  @media (min-width: 450px) and (max-width: 900px) {
+    i {
+      font-size: 150px;
+    }
+  }
+
+  @media (min-width: 900px) and (max-width: 1200px) {
+    i {
+      font-size: 175px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    i {
+      font-size: 200px;
+    }
   }
   animation: turnAround 1s ease-in-out;
 }
@@ -75,6 +89,31 @@
 .new__note__container {
   display: flex;
   flex-flow: column wrap;
+
+  @media (max-width: 450px) {
+    span {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 450px) and (max-width: 900px) {
+    span {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 900px) and (max-width: 1200px) {
+    span {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    span {
+      font-size: 20px;
+    }
+  }
+
   .new {
     display: flex;
     flex-flow: column wrap;
@@ -89,9 +128,10 @@
       padding: 10px;
       font: 0.75em "Arial";
     }
+
     #descriptionNote {
-      width: 200px;
-      height: 200px;
+      width: 100%;
+      min-height: 100px;
       background-color: #feff9c;
       text-align: center;
       resize: none;
