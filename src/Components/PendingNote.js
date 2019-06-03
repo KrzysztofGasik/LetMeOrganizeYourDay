@@ -9,7 +9,8 @@ class PendingNote extends Component {
       isClick: false,
       readOnly: true,
       title: "",
-      description: ""
+      description: "",
+      noteID: []
     };
   }
 
@@ -29,6 +30,7 @@ class PendingNote extends Component {
     newNotes[indexToUpdate].description = this.state.description;
 
     this.setState({
+      noteID: [note.id],
       notes: newNotes,
       edit: !this.state.edit,
       readOnly: !this.state.readOnly
@@ -89,7 +91,12 @@ class PendingNote extends Component {
                           this.state.title === "" ? el.title : this.state.title
                         }
                         readOnly={this.state.readOnly}
-                        onChange={e => this.editInput(e, "title")}
+                        onChange={
+                          this.state.noteID.includes(el.id) && this.state.edit
+                            ? e => this.editInput(e, "title", el)
+                            : undefined
+                        }
+                        // onChange={e => this.editInput(e, "title")}
                       />
                       <input
                         type="text"
@@ -100,7 +107,12 @@ class PendingNote extends Component {
                             : this.state.description
                         }
                         readOnly={this.state.readOnly}
-                        onChange={e => this.editInput(e, "description")}
+                        onChange={
+                          this.state.noteID.includes(el.id) && this.state.edit
+                            ? e => this.editInput(e, "description", el)
+                            : undefined
+                        }
+                        // onChange={e => this.editInput(e, "description") }
                       />
                       <span>{el.date}</span>
                       <div className="pending__note_wrapper">
@@ -108,7 +120,9 @@ class PendingNote extends Component {
                           Complete
                         </button>
                         <button onClick={e => this.editNote(e, el)}>
-                          {this.state.edit ? "Finish" : "Edit"}
+                          {this.state.noteID.includes(el.id) && this.state.edit
+                            ? "Finish"
+                            : "Edit"}
                         </button>
                         <button onClick={() => this.deleteNote(el.id)}>
                           Delete
