@@ -7,7 +7,7 @@ const NewsList = [
   {
     name: "gazeta",
     path: gazeta,
-    url: "http://www.gazeta.pl/0,0.html"
+    url: "https://twitter.com/gazeta_wyborcza"
   },
   {
     name: "onet",
@@ -17,7 +17,7 @@ const NewsList = [
   {
     name: "wp",
     path: wp,
-    url: "https://www.wp.pl/"
+    url: "https://www.wp.pl"
   }
 ];
 
