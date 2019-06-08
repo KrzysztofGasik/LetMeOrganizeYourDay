@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import gazeta from "../../img/gazeta.png";
+import rzeczpospolita from "../../img/rzeczpospolita.png";
 import onet from "../../img/onet.png";
 import wp from "../../img/wp.png";
 
 const NewsList = [
   {
-    name: "gazeta",
-    path: gazeta,
-    url: "https://twitter.com/gazeta_wyborcza"
+    name: "rzeczpospolita",
+    path: rzeczpospolita,
+    url: "https://www.rp.pl"
   },
   {
     name: "onet",
