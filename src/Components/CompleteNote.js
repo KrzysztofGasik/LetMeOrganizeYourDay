@@ -42,7 +42,7 @@ class CompleteNote extends Component {
   render() {
     if (
       localStorage.getItem("data2") !== null &&
-      localStorage.getItem("data2").length > 0
+      localStorage.getItem("data2").length > 2
     ) {
       return (
         <ul>

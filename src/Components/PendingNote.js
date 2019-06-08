@@ -73,8 +73,8 @@ class PendingNote extends Component {
 
   render() {
     if (
-      localStorage.getItem("data") !== null &&
-      localStorage.getItem("data").length > 0
+      localStorage.getItem("data") != null &&
+      localStorage.getItem("data").length > 2
     ) {
       return (
         <ul>
@@ -88,7 +88,10 @@ class PendingNote extends Component {
                         type="text"
                         id="titleNote"
                         value={
-                          this.state.title === "" ? el.title : this.state.title
+                          this.state.noteID.includes(el.id) &&
+                          this.state.title !== ""
+                            ? this.state.title
+                            : el.title
                         }
                         readOnly={this.state.readOnly}
                         onChange={
@@ -96,15 +99,15 @@ class PendingNote extends Component {
                             ? e => this.editInput(e, "title", el)
                             : undefined
                         }
-                        // onChange={e => this.editInput(e, "title")}
                       />
                       <input
                         type="text"
                         id="descriptionNote"
                         value={
-                          this.state.description === ""
-                            ? el.description
-                            : this.state.description
+                          this.state.noteID.includes(el.id) &&
+                          this.state.description !== ""
+                            ? this.state.description
+                            : el.description
                         }
                         readOnly={this.state.readOnly}
                         onChange={

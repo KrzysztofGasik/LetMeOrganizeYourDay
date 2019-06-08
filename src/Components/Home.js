@@ -1,19 +1,22 @@
 import React, { Component } from "react";
+import gazeta from "../../img/gazeta.png";
+import onet from "../../img/onet.png";
+import wp from "../../img/wp.png";
 
 const NewsList = [
   {
     name: "gazeta",
-    path: "../img/gazeta.png",
+    path: gazeta,
     url: "http://www.gazeta.pl/0,0.html"
   },
   {
     name: "onet",
-    path: "../img/onet.png",
+    path: onet,
     url: "https://www.onet.pl"
   },
   {
     name: "wp",
-    path: "../img/wp.png",
+    path: wp,
     url: "https://www.wp.pl/"
   }
 ];
@@ -27,7 +30,7 @@ class Home extends Component {
     };
   }
 
-  generateIframe = (url) => {
+  generateIframe = url => {
     this.setState(prevState => {
       return {
         isSelect: !prevState.isSelect,

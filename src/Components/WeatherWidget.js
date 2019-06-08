@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Calendar from "react-calendar";
+import { DateContext } from "../App";
 
 class WeatherAPI extends Component {
   constructor(props) {
@@ -22,17 +23,19 @@ class WeatherAPI extends Component {
     navigator.geolocation.getCurrentPosition(position => {
       const latitude = position.coords.latitude.toFixed(2);
       const longitude = position.coords.longitude.toFixed(2);
-      this.setState({
-        lat: latitude,
-        long: longitude
-      });
+      this.setState(
+        {
+          lat: latitude,
+          long: longitude
+        },
+        () => {
+          if (this.state.lat != "" && this.state.long != "") {
+            this.getWeather(this.state.lat, this.state.long);
+          }
+        }
+      );
     });
-    
-    if (this.state.lat != "" && this.state.long != "") {
-      this.getWeather(this.state.lat, this.state.long);
-    }
   };
-
 
   getWeather = (lat, long) => {
     fetch(
@@ -41,16 +44,14 @@ class WeatherAPI extends Component {
       .then(response => response.json())
       .then(data => {
         this.setState({
-            city: data.name,
-            humidity: data.main.humidity,
-            pressure: data.main.pressure,
-            temp: data.main.temp.toFixed(0),
-            wind: data.wind.speed,
-            img:
-              "http://openweathermap.org/img/w/" +
-              data.weather[0].icon +
-              ".png",
-            show: !this.state.show
+          city: data.name,
+          humidity: data.main.humidity,
+          pressure: data.main.pressure,
+          temp: data.main.temp.toFixed(0),
+          wind: data.wind.speed,
+          img:
+            "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png",
+          show: !this.state.show
         });
       })
       .catch(() => {
@@ -107,18 +108,26 @@ class CurrentDate extends Component {
 
   render() {
     return (
-      <div>
-        <Calendar onChange={this.onChange} value={this.state.date}  locale='en-US'/>
-      </div>
+      <DateContext.Consumer>
+        {({ setDate }) => (
+          <div>
+            <Calendar
+              onChange={setDate}
+              value={this.state.date}
+              locale="en-US"
+            />
+          </div>
+        )}
+      </DateContext.Consumer>
     );
   }
 }
 
 export const WeatherWidget = () => {
   return (
-    <aside>
-        <WeatherAPI />
-        <CurrentDate/>
-    </aside>
+    <section>
+      <WeatherAPI />
+      <CurrentDate />
+    </section>
   );
 };

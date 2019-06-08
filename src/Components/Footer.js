@@ -26,16 +26,16 @@ const socialMediaElements = [
 export const Footer = () => {
   return (
     <footer>
-    <span>Create by Krzysztof Gasik &copy; 2019</span>
+      <span>Create by Krzysztof Gasik &copy; 2019</span>
       <ul>
         {socialMediaElements.map(item => (
           <li key={item.name}>
-            <a href={item.href} target='_blank'>
+            <a href={item.href} target="_blank">
               <i className={item.icon} />
             </a>
           </li>
         ))}
       </ul>
     </footer>
-  )
+  );
 };

@@ -8,14 +8,21 @@ import { WeatherWidget } from "./Components/WeatherWidget";
 import { Footer } from "./Components/Footer";
 import "../scss/style.scss";
 
+export const DateContext = React.createContext('dateChange');
+
 class App extends Component {
   componentDidMount() {
     document.body.classList.add("theme-color0");
   }
 
+  state = {
+    date: new Date().toLocaleDateString("pl-PL")
+  }
+
   render() {
     return (
       <>
+       <DateContext.Provider value={{date: this.state.date, setDate: (date) => this.setState({date: date.toLocaleDateString("pl-PL")})}}>
         <HashRouter>
           <Header />
           <div className="wrapper">
@@ -25,6 +32,7 @@ class App extends Component {
           </div>
           <Footer />
         </HashRouter>
+        </DateContext.Provider>
       </>
     );
   }

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import {Switch, Route} from "react-router-dom";
-import {Home} from "./Home";
-import {NewNote} from "./NewNote";
-import {PendingNote} from "./PendingNote";
-import {CompleteNote} from "./CompleteNote";
-import {Settings} from "./Settings";
+import { Switch, Route } from "react-router-dom";
+import { Home } from "./Home";
+import { NewNote } from "./NewNote";
+import { PendingNote } from "./PendingNote";
+import { CompleteNote } from "./CompleteNote";
+import { Settings } from "./Settings";
 
 export const MainWindow = () => {
   return (
