@@ -39,7 +39,7 @@ class WeatherAPI extends Component {
 
   getWeather = (lat, long) => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=6b467043a397afda4b817e26b6e2afa9&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=6b467043a397afda4b817e26b6e2afa9&units=metric`
     )
       .then(response => response.json())
       .then(data => {
@@ -50,7 +50,7 @@ class WeatherAPI extends Component {
           temp: data.main.temp.toFixed(0),
           wind: data.wind.speed,
           img:
-            "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png",
+            "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png",
           show: !this.state.show
         });
       })
