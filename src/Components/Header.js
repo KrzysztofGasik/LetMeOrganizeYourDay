@@ -37,7 +37,7 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <span>Let me help organize your day</span>
+        <span>Let me organize your day</span>
         {this.state.doSearch ? (
           <form
             action="https://www.google.com/search"
