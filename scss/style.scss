@@ -16,6 +16,9 @@ html, body {
 }
 
 @media (max-width: 450px) {
+  #app {
+    overflow: auto;
+  }
   header {
     form button {
       margin-top: 5px;
@@ -38,6 +41,9 @@ html, body {
 }
 
 @media (min-width: 450px) and (max-width: 900px) {
+  #app {
+    overflow: auto;
+  }
   header {
     form button {
       margin: 5px 0 0 5px;
