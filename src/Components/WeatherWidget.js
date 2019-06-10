@@ -84,9 +84,9 @@ class WeatherAPI extends Component {
             <div className="data__weather__split">
               <span>City: {this.state.city}</span>
               <span>Humidity: {this.state.humidity} %</span>
-              <span>Pressure: {this.state.pressure}</span>
+              <span>Pressure: {this.state.pressure} hPa</span>
               <span>Temperature: {this.state.temp} &#8451;</span>
-              <span>Wind: {this.state.wind}</span>
+              <span>Wind: {this.state.wind} m/s</span>
             </div>
             <img src={this.state.img} width="100px" />
           </div>

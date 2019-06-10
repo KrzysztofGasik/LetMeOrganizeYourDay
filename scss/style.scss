@@ -33,7 +33,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 0;
+    margin: 0 0 10px 0;
   }
 }
 
@@ -56,7 +56,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 0;
+    margin: 0 0 10px 0;
   }
 }
 
@@ -75,7 +75,7 @@ html, body {
     .main__window {
       flex: 1 1 50%;
     }
-    aside {
+    section {
       flex: 1 1 40%;
     }
   }

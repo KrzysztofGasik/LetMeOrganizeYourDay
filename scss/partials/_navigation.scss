@@ -57,7 +57,11 @@ nav {
   @media (min-width: 450px) and (max-width: 900px) {
     font-size: 35px;
   }
-  @media (min-width: 900px) {
+  @media (min-width: 900px) and (max-width: 1200px) {
     font-size: 50px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 65px;
   }
 }

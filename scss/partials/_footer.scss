@@ -20,17 +20,36 @@ footer {
   }
 }
 
+span {
+  a {
+    color: #fff;
+  }
+  a:visited,
+  a:link {
+    text-decoration: none;
+  }
+}
+
+.fa-github:hover {
+  cursor: pointer;
+  color: #000;
+}
+
 .fa-facebook-f,
 .fa-linkedin-in,
 .fa-youtube,
-.fa-twitter {
+.fa-twitter,
+.fa-github {
   @media (max-width: 450px) {
     font-size: 15px;
   }
   @media (min-width: 450px) and (max-width: 900px) {
     font-size: 20px;
   }
-  @media (min-width: 900px) {
+  @media (min-width: 900px) and (max-width: 1200px) {
     font-size: 25px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 30px;
   }
 }
