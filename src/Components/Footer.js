@@ -26,7 +26,7 @@ const socialMediaElements = [
 export const Footer = () => {
   return (
     <footer>
-      <span>Create by Krzysztof Gasik &copy; 2019 find me on <a href='https://github.com/KrzGas' target="_blank"><i class="fab fa-github"></i></a></span>
+      <span>Krzysztof Gasik &copy; 2019 find me on <a href='https://github.com/KrzGas' target="_blank"><i className="fab fa-github"></i></a></span>
       <ul>
         {socialMediaElements.map(item => (
           <li key={item.name}>
