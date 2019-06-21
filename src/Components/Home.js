@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import rzeczpospolita from "../../img/rzeczpospolita.png";
+import natemat from "../../img/natemat.png";
 import onet from "../../img/onet.png";
 import wp from "../../img/wp.png";
 
 const NewsList = [
   {
-    name: "rzeczpospolita",
-    path: rzeczpospolita,
-    url: "https://www.rp.pl"
+    name: "natemat",
+    path: natemat,
+    url: "https://natemat.pl/"
   },
   {
     name: "onet",
