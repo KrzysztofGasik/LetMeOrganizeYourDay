@@ -1,11 +1,11 @@
 footer {
   width: 100%;
-  height: auto;
   font-style: italic;
   padding: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  min-height: 60px;
   ul {
     list-style: none;
     display: flex;
