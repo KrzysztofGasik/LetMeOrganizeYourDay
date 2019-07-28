@@ -7,9 +7,10 @@
     form button {
       color: #fae8be;
       background-color: #311d12;
-      &:hover {
-        color: #ead7ad;
-      }
+    }
+    form button:hover {
+      color: #ead7ad;
+      cursor: grab;
     }
 
     .fa-search {
@@ -29,6 +30,7 @@
         background: transparent;
         &:hover {
           color: #200c01;
+          cursor: pointer;
         }
       }
     }
@@ -47,6 +49,7 @@
         }
         button:hover {
           background-color: #200c01;
+          cursor: pointer;
         }
         input#descriptionNote {
           color: #fae8be;
@@ -73,6 +76,7 @@
 
   nav ul li:hover:after {
     color: #fae8be;
+    cursor: pointer;
   }
 
   .fa-home,
@@ -89,6 +93,7 @@
   .fa-sticky-note:hover,
   .fa-cog:hover {
     color: #fae8be;
+    cursor: pointer;
   }
 
   section {
@@ -98,8 +103,9 @@
   .btn__weather {
     background-color: #311d12;
     color: #fae8be;
-    &::hover {
+    &:hover {
       background-color: #200c01;
+      cursor: pointer;
     }
   }
 
@@ -117,8 +123,9 @@
     border: none;
     color: #fae8be;
     font-weight: 900;
-    &::hover {
+    &:hover {
       background-color: #200c01;
+      cursor: pointer;
     }
   }
 
@@ -140,17 +147,22 @@
 .theme-blue {
   header {
     background-color: #001755;
-    color: #DFD8CE;
+    color: #dfd8ce;
     form button {
-      color: #FB9D00;
-      background-color: #DFD8CE;
+      color: #fb9d00;
+      background-color: #dfd8ce;
     }
+    form button:hover {
+      color: #ea8c00;
+      cursor: grab;
+    }
+
     .fa-search {
-      color: #FB9D00;
+      color: #fb9d00;
     }
 
     .fa-search:hover {
-      color: #DFD8CE;
+      color: #dfd8ce;
     }
   }
 
@@ -158,10 +170,11 @@
     .add {
       background: transparent;
       i {
-        color: #FB9D00;
+        color: #fb9d00;
         background: transparent;
-        :hover {
-          color: #DFD8CE;
+        &:hover {
+          color: #ea8c00;
+          cursor: pointer;
         }
       }
     }
@@ -175,11 +188,12 @@
         input,
         button,
         span {
-          background-color: #FB9D00;
+          background-color: #fb9d00;
           color: #311d12;
         }
         button:hover {
-          background-color: #DFD8CE;
+          background-color: #dfd8ce;
+          cursor: pointer;
         }
         input#descriptionNote {
           background-color: #344472;
@@ -197,7 +211,7 @@
       li {
         a:visited,
         a:link {
-          color: #DFD8CE;
+          color: #dfd8ce;
         }
       }
     }
@@ -208,7 +222,7 @@
   .fa-check,
   .fa-sticky-note,
   .fa-cog {
-    color: #FB9D00;
+    color: #fb9d00;
   }
 
   .fa-home:hover,
@@ -216,7 +230,8 @@
   .fa-check:hover,
   .fa-sticky-note:hover,
   .fa-cog:hover {
-    color: #DFD8CE;
+    color: #dfd8ce;
+    cursor: pointer;
   }
 
   section {
@@ -224,16 +239,16 @@
   }
 
   .btn__weather {
-    background-color: #FB9D00;
-    color: #DFD8CE;
-    
+    background-color: #fb9d00;
+    color: #dfd8ce;
   }
   .btn__weather:hover {
-    background-color: #EA8C00;
+    background-color: #ea8c00;
+    cursor: pointer;
   }
 
   div.react-calendar {
-    background-color: #DFD8CE;
+    background-color: #dfd8ce;
   }
 
   .react-calendar__tile--active {
@@ -241,28 +256,28 @@
   }
 
   .theme-switch {
-    background-color: #FB9D00;
+    background-color: #fb9d00;
     padding: 10px;
     border: none;
-    color: #DFD8CE;
+    color: #dfd8ce;
     font-weight: 900;
   }
 
   .theme-switch:hover {
-    background-color: #EA8C00;
+    background-color: #ea8c00;
     cursor: pointer;
   }
 
   footer {
     background-color: #001755;
-    color: #DFD8CE;
+    color: #dfd8ce;
   }
 
   .fa-facebook-f,
   .fa-linkedin-in,
   .fa-youtube,
   .fa-twitter {
-    color: #FB9D00;
+    color: #fb9d00;
   }
 }
 
