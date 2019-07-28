@@ -1,135 +1,6 @@
-.theme-color0 {
-  header {
-    background-color: #00a82d;
-    color: #fff;
-    form button {
-      color: #ffae19;
-      background-color: #fff;
-      &:hover {
-        color: #cc8b14;
-      }
-    }
-    .fa-search {
-      color: #ffae19;
-    }
+//----------------- red theme
 
-    .fa-search:hover {
-      color: #fff;
-    }
-  }
-
-  .main__window {
-    .add {
-      background: transparent;
-      i {
-        color: #ffae19;
-        background: transparent;
-        &:hover {
-          color: #cc8b14;
-        }
-      }
-    }
-
-    .new__note__container,
-    .pending__note__container {
-      display: flex;
-      flex-flow: column wrap;
-      .new,
-      .pending {
-        input,
-        button,
-        span {
-          background-color: #ffae19;
-          color: #311d12;
-        }
-        button:hover {
-          background-color: #cc8b14;
-        }
-        input#descriptionNote {
-          background-color: #66ca81;
-        }
-      }
-    }
-    .pending__note__container:hover {
-      animation: turnNote 1s ease-in-out infinite alternate;
-    }
-  }
-
-  nav {
-    background-color: #00a82d;
-    ul {
-      li {
-        a:visited,
-        a:link {
-          color: #fff;
-        }
-      }
-    }
-  }
-
-  .fa-home,
-  .fa-plus-square,
-  .fa-check,
-  .fa-sticky-note,
-  .fa-cog {
-    color: #ffae19;
-  }
-
-  .fa-home:hover,
-  .fa-plus-square:hover,
-  .fa-check:hover,
-  .fa-sticky-note:hover,
-  .fa-cog:hover {
-    color: #000;
-  }
-
-  section {
-    background-color: #00a82d;
-  }
-
-  .btn__weather {
-    background-color: #ffae19;
-    color: #fff;
-    &::hover {
-      background-color: #cc8b14;
-    }
-  }
-
-  div.react-calendar {
-    background-color: #fff;
-  }
-
-  .react-calendar__tile--active {
-    background-color: #00a82d;
-  }
-
-  .theme-switch {
-    background-color: #ffae19;
-    padding: 10px;
-    border: none;
-    color: #fff;
-    font-weight: 900;
-    &::hover {
-      background-color: #cc8b14;
-    }
-  }
-
-  footer {
-    background-color: #00a82d;
-    color: #fff;
-  }
-
-  .fa-facebook-f,
-  .fa-linkedin-in,
-  .fa-youtube,
-  .fa-twitter {
-    color: #ffae19;
-  }
-}
-
-//---------------------------------------- COLOR 1
-
-.theme-color1 {
+.theme-red {
   header {
     background-color: #fd4a1f;
     color: #fff;
@@ -261,6 +132,137 @@
   .fa-youtube,
   .fa-twitter {
     color: #311d12;
+  }
+}
+
+//----------------- blue theme
+
+.theme-blue {
+  header {
+    background-color: #001755;
+    color: #DFD8CE;
+    form button {
+      color: #FB9D00;
+      background-color: #DFD8CE;
+    }
+    .fa-search {
+      color: #FB9D00;
+    }
+
+    .fa-search:hover {
+      color: #DFD8CE;
+    }
+  }
+
+  .main__window {
+    .add {
+      background: transparent;
+      i {
+        color: #FB9D00;
+        background: transparent;
+        :hover {
+          color: #DFD8CE;
+        }
+      }
+    }
+
+    .new__note__container,
+    .pending__note__container {
+      display: flex;
+      flex-flow: column wrap;
+      .new,
+      .pending {
+        input,
+        button,
+        span {
+          background-color: #FB9D00;
+          color: #311d12;
+        }
+        button:hover {
+          background-color: #DFD8CE;
+        }
+        input#descriptionNote {
+          background-color: #344472;
+        }
+      }
+    }
+    .pending__note__container:hover {
+      animation: turnNote 1s ease-in-out infinite alternate;
+    }
+  }
+
+  nav {
+    background-color: #001755;
+    ul {
+      li {
+        a:visited,
+        a:link {
+          color: #DFD8CE;
+        }
+      }
+    }
+  }
+
+  .fa-home,
+  .fa-plus-square,
+  .fa-check,
+  .fa-sticky-note,
+  .fa-cog {
+    color: #FB9D00;
+  }
+
+  .fa-home:hover,
+  .fa-plus-square:hover,
+  .fa-check:hover,
+  .fa-sticky-note:hover,
+  .fa-cog:hover {
+    color: #DFD8CE;
+  }
+
+  section {
+    background-color: #001755;
+  }
+
+  .btn__weather {
+    background-color: #FB9D00;
+    color: #DFD8CE;
+    
+  }
+  .btn__weather:hover {
+    background-color: #EA8C00;
+  }
+
+  div.react-calendar {
+    background-color: #DFD8CE;
+  }
+
+  .react-calendar__tile--active {
+    background-color: #001755;
+  }
+
+  .theme-switch {
+    background-color: #FB9D00;
+    padding: 10px;
+    border: none;
+    color: #DFD8CE;
+    font-weight: 900;
+  }
+
+  .theme-switch:hover {
+    background-color: #EA8C00;
+    cursor: pointer;
+  }
+
+  footer {
+    background-color: #001755;
+    color: #DFD8CE;
+  }
+
+  .fa-facebook-f,
+  .fa-linkedin-in,
+  .fa-youtube,
+  .fa-twitter {
+    color: #FB9D00;
   }
 }
 

@@ -12,7 +12,7 @@ export const DateContext = React.createContext('dateChange');
 
 class App extends Component {
   componentDidMount() {
-    document.body.classList.add("theme-color0");
+    document.body.classList.add("theme-red");
   }
 
   state = {

@@ -4,7 +4,7 @@ class Settings extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: document.body.classList.contains("theme-color1")
+      theme: document.body.classList.contains("theme-blue")
     };
   }
 
@@ -20,10 +20,10 @@ class Settings extends Component {
     return (
       <>
         <button className="theme-switch" onClick={this.toggleTheme}>
-          {this.state.theme ? "Change to default theme" : "Change to red theme"}
+          {this.state.theme ? "Change to red theme" : "Change to blue theme"}
           {this.state.theme
-            ? document.body.classList.add("theme-color1")
-            : document.body.classList.remove("theme-color1")}
+            ? document.body.classList.add("theme-blue")
+            : document.body.classList.remove("theme-blue")}
         </button>
       </>
     );

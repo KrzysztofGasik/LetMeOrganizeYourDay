@@ -33,7 +33,7 @@ export const Footer = () => {
         </a>
         &#160;&#160;and&#160;&#160;
         <a href="https://linkedin.com/in/krzysztof-gasik" target="_blank">
-          <i className="fab fa-linkedin-in" />
+          <i className="fab fa-linkedin-in" id="linked"/>
         </a>
       </span>
       <ul>

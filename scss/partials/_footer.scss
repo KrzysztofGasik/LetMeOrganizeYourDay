@@ -30,7 +30,11 @@ span {
   }
 }
 
-.fa-github:hover {
+#linked {
+  color: #fff;
+}
+
+.fa-github:hover, #linked:hover {
   cursor: pointer;
   color: #000;
 }
