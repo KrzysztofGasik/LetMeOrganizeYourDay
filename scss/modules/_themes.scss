@@ -2,23 +2,24 @@
 
 .theme-red {
   header {
-    background-color: #fd4a1f;
-    color: #fff;
+    background-color: $red-main1;
+    color: $red-main3;
     form button {
-      color: #fae8be;
-      background-color: #311d12;
+      color: $red-main3;
+      background-color: $red-main2;
     }
     form button:hover {
-      color: #ead7ad;
+      color: $red-main3-hover;
       cursor: grab;
     }
 
     .fa-search {
-      color: #311d12;
+      color: $red-main2;
     }
 
     .fa-search:hover {
-      color: #fae8be;
+      color: $red-main3;
+      cursor: pointer;
     }
   }
 
@@ -26,10 +27,10 @@
     .add {
       background: transparent;
       i {
-        color: #311d12;
+        color: $red-main2;
         background: transparent;
         &:hover {
-          color: #200c01;
+          color: $red-main2-hover;
           cursor: pointer;
         }
       }
@@ -44,16 +45,16 @@
         input,
         button,
         span {
-          background-color: #311d12;
-          color: #fae8be;
+          background-color: $red-main2;
+          color: $red-main3;
         }
         button:hover {
-          background-color: #200c01;
+          background-color: $red-main2-hover;
           cursor: pointer;
         }
         input#descriptionNote {
-          color: #fae8be;
-          background-color: #fd4a1f;
+          color: $red-main3;
+          background-color: $red-main1;
         }
       }
     }
@@ -63,19 +64,19 @@
   }
 
   nav {
-    background-color: #fd4a1f;
+    background-color: $red-main1;
     ul {
       li {
         a:visited,
         a:link {
-          color: #200c01;
+          color: $red-main2-hover;
         }
       }
     }
   }
 
   nav ul li:hover:after {
-    color: #fae8be;
+    color: $red-main3;
     cursor: pointer;
   }
 
@@ -84,7 +85,7 @@
   .fa-check,
   .fa-sticky-note,
   .fa-cog {
-    color: #311d12;
+    color: $red-main2;
   }
 
   .fa-home:hover,
@@ -92,53 +93,58 @@
   .fa-check:hover,
   .fa-sticky-note:hover,
   .fa-cog:hover {
-    color: #fae8be;
+    color: $red-main3;
     cursor: pointer;
   }
 
   section {
-    background-color: #fd4a1f;
+    background-color: $red-main1;
   }
 
   .btn__weather {
-    background-color: #311d12;
-    color: #fae8be;
+    background-color: $red-main2;
+    color: $red-main3;
     &:hover {
-      background-color: #200c01;
+      background-color: $red-main2-hover;
       cursor: pointer;
     }
   }
 
   div.react-calendar {
-    background-color: #fae8be;
+    background-color: $red-main3;
   }
 
   .react-calendar__tile--active {
-    background-color: #fd4a1f;
+    background-color: $red-main1;
   }
 
   .theme-switch {
-    background-color: #311d12;
+    background-color: $red-main2;
     padding: 10px;
     border: none;
-    color: #fae8be;
+    color: $red-main3;
     font-weight: 900;
     &:hover {
-      background-color: #200c01;
+      background-color: $red-main2-hover;
       cursor: pointer;
     }
   }
 
   footer {
-    background-color: #fd4a1f;
-    color: #fae8be;
+    background-color: $red-main1;
+    color: $red-main3;
   }
 
   .fa-facebook-f,
   .fa-linkedin-in,
   .fa-youtube,
   .fa-twitter {
-    color: #311d12;
+    color: $red-main2;
+  }
+
+  .fa-github:hover, #linked:hover {
+    cursor: pointer;
+    color: $red-main2;
   }
 }
 
@@ -146,23 +152,24 @@
 
 .theme-blue {
   header {
-    background-color: #001755;
-    color: #dfd8ce;
+    background-color: $blue-main1;
+    color: $blue-main3;
     form button {
-      color: #fb9d00;
-      background-color: #dfd8ce;
+      color: $blue-main2;
+      background-color: $blue-main3;
     }
     form button:hover {
-      color: #ea8c00;
+      color: $blue-main2-hover;
       cursor: grab;
     }
 
     .fa-search {
-      color: #fb9d00;
+      color: $blue-main2;
     }
 
     .fa-search:hover {
-      color: #dfd8ce;
+      color: $blue-main3;
+      cursor: pointer;
     }
   }
 
@@ -170,10 +177,10 @@
     .add {
       background: transparent;
       i {
-        color: #fb9d00;
+        color: $blue-main2;
         background: transparent;
         &:hover {
-          color: #ea8c00;
+          color: $blue-main2-hover;
           cursor: pointer;
         }
       }
@@ -188,15 +195,15 @@
         input,
         button,
         span {
-          background-color: #fb9d00;
-          color: #311d12;
+          background-color: $blue-main2;
+          color: #000;
         }
         button:hover {
-          background-color: #dfd8ce;
+          background-color: $blue-main3;
           cursor: pointer;
         }
         input#descriptionNote {
-          background-color: #344472;
+          background-color: $blue-main1;
         }
       }
     }
@@ -206,12 +213,12 @@
   }
 
   nav {
-    background-color: #001755;
+    background-color: $blue-main1;
     ul {
       li {
         a:visited,
         a:link {
-          color: #dfd8ce;
+          color: $blue-main3;
         }
       }
     }
@@ -222,7 +229,7 @@
   .fa-check,
   .fa-sticky-note,
   .fa-cog {
-    color: #fb9d00;
+    color: $blue-main2;
   }
 
   .fa-home:hover,
@@ -230,54 +237,60 @@
   .fa-check:hover,
   .fa-sticky-note:hover,
   .fa-cog:hover {
-    color: #dfd8ce;
+    color: $blue-main3;
     cursor: pointer;
   }
 
   section {
-    background-color: #001755;
+    background-color: $blue-main1;
   }
 
   .btn__weather {
-    background-color: #fb9d00;
-    color: #dfd8ce;
+    background-color: $blue-main2;
+    color: $blue-main3;
   }
   .btn__weather:hover {
-    background-color: #ea8c00;
+    background-color: $blue-main2-hover;
+    color: $blue-main3-hover;
     cursor: pointer;
   }
 
   div.react-calendar {
-    background-color: #dfd8ce;
+    background-color: $blue-main3;
   }
 
   .react-calendar__tile--active {
-    background-color: #001755;
+    background-color: $blue-main1;
   }
 
   .theme-switch {
-    background-color: #fb9d00;
+    background-color: $blue-main2;
     padding: 10px;
     border: none;
-    color: #dfd8ce;
+    color: $blue-main3;
     font-weight: 900;
   }
 
   .theme-switch:hover {
-    background-color: #ea8c00;
+    background-color: $blue-main2-hover;
     cursor: pointer;
   }
 
   footer {
-    background-color: #001755;
-    color: #dfd8ce;
+    background-color: $blue-main1;
+    color: $blue-main3;
   }
 
   .fa-facebook-f,
   .fa-linkedin-in,
   .fa-youtube,
   .fa-twitter {
-    color: #fb9d00;
+    color: $blue-main2;
+  }
+
+  .fa-github:hover, #linked:hover {
+    cursor: pointer;
+    color: $blue-main2;
   }
 }
 
